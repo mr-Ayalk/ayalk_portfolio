@@ -13,7 +13,7 @@ export const Card = ({
     
     after:absolute after:inset-0 after:rounded-3xl after:content-['']
     after:outline after:outline-2 after:-outline-offset-2 after:outline-white/20
-    after:pointer-events-none after:z-10 p-6
+    after:pointer-events-none after:z-10 
     `,
         className
       )}
