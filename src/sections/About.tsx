@@ -45,30 +45,45 @@ const hobbies = [
   {
     title: "Painting",
     emaoji: "🎨",
+    left: "5%",
+    top: "5%",
   },
   {
     title: "Photography",
     emaoji: "📷",
-  },
-  {
-    title: "Gaming",
-    emaoji: "🎮",
+    left: "50%",
+    top: "5%",
   },
   {
     title: "Hiking",
     emaoji: "🥾",
+    left: "35%",
+    top: "40%",
   },
+  {
+    title: "Gaming",
+    emaoji: "🎮",
+    left: "10%",
+    top: "35%",
+  },
+
   {
     title: "Music",
     emaoji: "🎶",
+    left: "70%",
+    top: "40%",
   },
   {
     title: "Fitness",
     emaoji: "🤾‍♂️",
+    left: "5%",
+    top: "65%",
   },
   {
     title: "Reading",
     emaoji: "📖",
+    left: "45%",
+    top: "70%",
   },
 ];
 export const AboutSection = () => {
@@ -108,16 +123,26 @@ export const AboutSection = () => {
             />
           </Card>
 
-          <Card>
+          <Card className="h-[320px] p-0 flex flex-col">
             <CardHeader
               title="Beyond the Code"
               description="Explore the interests and hobbies beyond the digital realm"
+              className="px-6 py-6"
             />
 
-            <div>
+            <div className="relative flex-1">
               {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
+                <div
+                  key={hobby.title}
+                  className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from bg-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  style={{
+                    left: hobby.left,
+                    top: hobby.top,
+                  }}
+                >
+                  <span className="font-medium text-gray-950">
+                    {hobby.title}
+                  </span>
                   <span>{hobby.emaoji}</span>
                 </div>
               ))}
