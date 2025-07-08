@@ -16,6 +16,8 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import myImage from "@/assets/images/IMG_20241024_065847_232.jpg";
+import virtualass from "@/assets/images/virtualass.png";
 const toolboxItems = [
   {
     title: "JavaScript",
@@ -102,12 +104,16 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5  lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="My Reads"
-                description=" Explore the books shaping my perspectives"
+                title="Besides Coding"
+                description="I am also a certified vertual assistant besides the cooding"
               />
 
-              <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book cover" />
+              <div className="w-64  h-96 mx-auto mt-2 md:mt-0">
+                <Image
+                  src={virtualass}
+                  alt="Book cover"
+                  className="size-auto"
+                />
               </div>
             </Card>
 
@@ -171,9 +177,9 @@ export const AboutSection = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from bg-emerald-300 to-sky-400 -z-20 animate-ping [animate-duration:2s] "></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from bg-emerald-300 to-sky-400 -z-10 "></div>
                 <Image
-                  src={smileMemoji}
+                  src={myImage}
                   alt="smiling imoji"
-                  className="size-20"
+                  className="size-20 rounded-full"
                 />
               </div>
             </Card>
