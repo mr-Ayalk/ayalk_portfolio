@@ -7,53 +7,69 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import chat_app_banner from "@/assets/images/chat_app.png";
+import lms_banner from "@/assets/images/lms.png";
+import eccomerce_banner from "@/assets/images/ecommerce.png";
+import bamah_banner from "@/assets/images/bamah_banner.png";
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Bamah Technology",
+    year: "2024",
+    title: "Real time Chat App",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://bamah-chat-app.onrender.com/login",
+    image: chat_app_banner,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Farez Academy",
+    year: "2025",
+    title: "Learning Management System",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://bamah-chat-app.onrender.com/login",
+    image: lms_banner,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Abysiniya Jewlery",
+    year: "2024",
+    title: "Eccomerce Application",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://bamah-chat-app.onrender.com/login",
+    image: eccomerce_banner,
+  },
+  {
+    company: "Bamah Tech and Engineering Solution",
+    year: "2024",
+    title: "Website landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://bamah-chat-app.onrender.com/login",
+    image: bamah_banner,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="projects">
       <div className="container">
         <SectionHeader
           eyebrow="  Real-world Results"
-          title="Featured Projects"
-          description="  See how I transformed concepts into engaging digital experiences."
+          title="Latest Projects"
+          description=" Discover how I turned ideas into captivating digital experiences."
         />
 
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
@@ -88,7 +104,11 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />

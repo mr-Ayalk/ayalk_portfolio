@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import myImage from "@/assets/images/IMG_20241024_065847_232.jpg";
@@ -6,11 +7,22 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaXTwitter,
+  FaInstagram,
+} from "react-icons/fa6";
+
 // Hero page
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-32 lg:py-32 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div
+      className="py-32 md:py-32 lg:py-32 relative z-0 overflow-x-clip"
+      id="home"
+    >
+      <div className="absolute inset-0  pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5 "
           style={{
@@ -156,22 +168,38 @@ export const HeroSection = () => {
         "
         >
           <h1 className="font-serif text-3xl  md:text-5xl  text-center mt-8 tracking-wide">
-            Building Exeptional User Experiances
+            Hey 👋 I’m Ayalkbet , a Full Stack Developer
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional
-            ,high-performing,web applications.Let`s descuss your next project
+            I specialize in crafting pixel-perfect, fluid, and responsive web
+            applications. I bring designs to life with smooth animations, clean
+            and well-structured front-end architecture, and robust back-end APIs
+            that just work. Whether it&apos;s building from scratch or scaling
+            existing systems, I focus on code quality, performance, and user
+            experience.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
+          <button className="inline-flex items-center gap-2 border border-white/15 px-4 h-12 rounded-xl">
+            <a
+              href="https://docs.google.com/document/d/1HH47IMkWDWWv71rh774SAIkKgtKTb_bme6XnOTNhVz4/edit?tab=t.0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="font-semibold">My Resume</span>
+            </a>
             <ArrowDown className="size-4" />
           </button>
 
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>✋</span>
-            <span className="font-semibold">Let`s Connect</span>
+            <FaGithub className="size-6" />
+            <a
+              href="https://github.com/mr-Ayalk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="font-semibold">My Github</span>
+            </a>
           </button>
         </div>
       </div>
