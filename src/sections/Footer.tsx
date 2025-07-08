@@ -2,19 +2,23 @@ import { title } from "process";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 const footerLinks = [
   {
-    title: "Youtube",
+    title: "LinkedIn",
     href: "#",
   },
   {
-    title: "Twitter",
+    title: "Github",
+    href: "#",
+  },
+  {
+    title: "X(tweeter)",
+    href: "#",
+  },
+  {
+    title: "Facebook",
     href: "#",
   },
   {
     title: "Instagram",
-    href: "#",
-  },
-  {
-    title: "LinkedIn",
     href: "#",
   },
 ];
@@ -26,6 +30,7 @@ export const Footer = () => {
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center  gap-8">
           <div className="text-white/40">&copy; 2025. All rights reserved.</div>
+          <div className="pl-10 font-bold underline">Ayalkbet Teketel </div>
 
           <nav className="flex flex-col md:flex-row items-center gap-8">
             {footerLinks.map((link) => (
