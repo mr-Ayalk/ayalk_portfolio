@@ -1,5 +1,6 @@
 "use client";
-
+import React from "react";
+import { toast } from "react-hot-toast";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 export const ContactSection = () => {
@@ -25,12 +26,36 @@ export const ContactSection = () => {
               </p>
             </div>
             <div className="">
-              <button
+              {/* <button
                 onClick={() =>
                   (window.location.href =
                     "mailto:ayalkteketel7@gmail.com?cc=ayalkteketel7@gmail.com&bcc=ayalkteketel7@gmail.com&subject=Get in touch")
                 }
                 className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 "
+              >
+                <span className="font-semibold">Contact Me</span>
+                <ArrowUpRightIcon className="size-4" />
+              </button> */}
+
+              <button
+                onClick={() => {
+                  const mailtoLink =
+                    "mailto:ayalkteketel7@gmail.com?cc=ayalkteketel7@gmail.com&bcc=ayalkteketel7@gmail.com&subject=Get in touch";
+
+                  console.log("Contact button clicked");
+                  console.log("Mailto link:", mailtoLink);
+
+                  // Attempt to open mail client
+                  window.location.href = mailtoLink;
+
+                  // Fallback alert if mail client doesn't open
+                  setTimeout(() => {
+                    toast.error(
+                      "Could not open your email app. Please email me manually at ayalkteketel7@gmail.com."
+                    );
+                  }, 500);
+                }}
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
               >
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4" />
