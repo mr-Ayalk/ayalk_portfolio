@@ -23,7 +23,7 @@ const portfolioProjects = [
       { title: "Increased mobile traffic by 35%" },
     ],
     link: "https://farez-space.netlify.app/",
-    image: chat_app_banner,
+    image: space_farez,
   },
   {
     company: "Bamah Technology",
