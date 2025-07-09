@@ -11,7 +11,20 @@ import chat_app_banner from "@/assets/images/chat_app.png";
 import lms_banner from "@/assets/images/lms.png";
 import eccomerce_banner from "@/assets/images/ecommerce.png";
 import bamah_banner from "@/assets/images/bamah_banner.png";
+import space_farez from "@/assets/images/space-farez.png";
 const portfolioProjects = [
+  {
+    company: "Farez Technology",
+    year: "2025",
+    title: "Space Web App Landing Page",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://farez-space.netlify.app/",
+    image: chat_app_banner,
+  },
   {
     company: "Bamah Technology",
     year: "2024",
